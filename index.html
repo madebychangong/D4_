@@ -1,5 +1,6 @@
 <a href="https://open.kakao.com/me/LunaBliss" target="_blank" style="display:block; text-decoration:none; color:inherit; cursor:pointer;">
   <div style="
+    position: relative;
     font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif; 
     max-width:650px; 
     margin:30px auto; 
@@ -11,12 +12,17 @@
     line-height:1.8;
     letter-spacing: 0.02rem;
   " id="promotionalContent">
+
+    <!-- madebychangong -->
+    <!-- madebychangong -->
+
     <div style="
       background:#1a1a1a; 
       border-radius:16px; 
       padding:35px 35px 40px; 
       box-shadow:0 0 20px rgba(0,0,0,0.7);
     ">
+
       <div style="
         font-size:2.1rem; 
         font-weight:700; 
@@ -86,7 +92,6 @@
         ">새벽작업 가능</span>
       </div>
 
-      <!-- 카드 영역 -->
       <div style="
         background:#2a2a2a; 
         border-radius:14px; 
@@ -203,7 +208,6 @@
         </ul>
       </div>
 
-      <!-- 푸터 -->
       <div style="
         margin-top:45px; 
         font-size:1.2rem; 
@@ -221,11 +225,15 @@
         💵 인벤 최저가 자부합니다<br>
         <span style="color:#4bb8ff;">📞 클릭 시 1:1 상담 연결</span>
       </div>
+
+      <div style="position:absolute; bottom:5px; right:10px; font-size:4px; color:#0d0d0d; user-select:none; pointer-events:none; opacity:0.1; z-index:1000;">
+        madebychangong
+      </div>
+
     </div>
   </div>
 </a>
 
-<!-- 홍보물 복사 버튼 -->
 <button id="copyPromoButton" style="
   position: fixed;
   bottom: 25px;
@@ -245,7 +253,6 @@
   홍보물 복사
 </button>
 
-<!-- 숨겨진 워터마크 -->
 <div style="font-size:3px; color:#0d0d0d; height:1px; overflow:hidden;">madebychangong_dontcopy_tag7425x</div>
 
 <script>
@@ -255,7 +262,7 @@
 
     try {
       await navigator.clipboard.writeText(contentToCopy);
-      alert('홍보물 HTML이 성공적으로 복사되었습니다! 인벤 게시판에 붙여넣기 하세요. 😉');
+      alert('홍보물이 복사되었습니다! 인벤 게시판에 붙여넣기 하세요. 😉');
     } catch (err) {
       console.error('클립보드 복사 실패:', err);
       alert('복사에 실패했습니다.');
