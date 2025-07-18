@@ -1,273 +1,112 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8" />
-    <title>D4 대행 서비스</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
-            background-color: #121922;
-            color: #f3f3f3;
-            line-height: 1.7; /* !important 제거 */
-            padding: 40px 16px;
-            padding-bottom: 80px;
-        }
-
-        a#full-link {
-            display: block;
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .container {
-            max-width: 740px;
-            margin: 0 auto;
-            background-color: rgba(0, 0, 0, 0.45);
-            padding: 30px 25px;
-            border-radius: 16px;
-            box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
-            user-select: text;
-        }
-
-        .title {
-            font-size: 1.9rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            letter-spacing: 0.04em;
-            text-shadow: 0 0 6px #80c7ff;
-        }
-
-        .subtext {
-            font-size: 1.05rem;
-            color: #c4d9ff;
-            margin-bottom: 25px;
-            letter-spacing: 0.03em;
-        }
-
-        .badge-group {
-            margin-bottom: 28px;
-        }
-
-        .badge {
-            display: inline-block;
-            background: #4bb8ff;
-            padding: 5px 14px;
-            margin: 5px 8px 0 0;
-            border-radius: 14px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: #0a1f39;
-            box-shadow: 0 0 8px #4bb8ffaa;
-            user-select: none;
-            letter-spacing: 0.03em;
-        }
-
-        .card {
-            background-color: rgba(255, 255, 255, 0.08);
-            padding: 12px 20px;
-            border-radius: 14px;
-            margin-top: 28px;
-            box-shadow: inset 0 0 12px #63a4ff55;
-            user-select: text;
-        }
-
-        .card h2 {
-            font-size: 1.25rem;
-            color: #a8d1ff;
-            margin-bottom: 8px;
-            text-shadow: 0 0 5px #7bb9ff;
-            letter-spacing: 0.03em;
-        }
-
-        .card ul {
-            padding-left: 0;
-            margin: 0;
-            color: #d7eaff;
-            font-size: 1rem;
-            letter-spacing: 0.02em;
-            list-style-position: inside;
-        }
-
-        .card ul li {
-            margin-bottom: 5px;
-            line-height: 1.4; /* !important 제거 */
-            text-indent: -1.2em;
-            padding-left: 1.2em;
-        }
-
-        .footer {
-            margin-top: 44px;
-            font-size: 1rem;
-            text-align: center;
-            color: #bcd9ffcc;
-            user-select: text;
-            letter-spacing: 0.03em;
-            line-height: 1.5; /* !important 제거 */
-        }
-
-        .footer strong {
-            display: block;
-            margin-bottom: 8px;
-            color: #dbf0ff;
-            font-weight: 700;
-            text-shadow: 0 0 8px #7db8ffaa;
-        }
-
-        .copy-btn-wrapper {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
-        .copy-btn {
-            background: #4bb8ff;
-            color: #0a1f39;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            box-shadow: 0 0 15px #4bb8ffaa;
-            transition: all 0.3s;
-        }
-        .copy-btn:hover {
-            background: #80c7ff;
-            transform: scale(1.05);
-        }
-
-        .hidden-marker {
-            font-size: 1px;
-            color: #121922;
-            position: absolute;
-            left: -9999px;
-            overflow: hidden;
-            height: 1px;
-            width: 1px;
-            white-space: nowrap;
-        }
-    </style>
-</head>
-<body>
-    <a href="https://open.kakao.com/me/LunaBliss" target="_blank" id="full-link" aria-label="디아블로4 1대1 상담 오픈채팅 바로가기">
-        <div class="container" role="main">
-            <div class="title">D4 전문 대행 / 버스 / 템판매 / 풀세팅</div>
-            <div class="subtext">📞 클릭하면 1:1 무료 상담 연결됩니다</div>
-
-            <div class="badge-group">
-                <span class="badge">시즌9</span>
-                <span class="badge">배틀넷</span>
-                <span class="badge">스팀</span>
-                <span class="badge">플스</span>
-                <span class="badge">새벽작업 가능</span>
-            </div>
-
-            <section class="card" aria-labelledby="bus-service-title">
-                <h2 id="bus-service-title">버스 서비스</h2>
-                <ul>
-                    <li>1~60렙 고행4 뚫</li>
-                    <li>고행4 벨리알 50판 / 100판</li>
-                    <li>군세 판당 버스</li>
-                    <li>정복자 1~300렙 버스 or 대행</li>
-                    <li>정복자 대행 시 문양 무료 업글</li>
-                </ul>
-            </section>
-
-            <section class="card" aria-labelledby="full-setup-title">
-                <h2 id="full-setup-title">풀세팅 작업</h2>
-                <ul>
-                    <li>야만 / 원소 / 도적 / 강령 / 혼령 / 드루 빌드 추천</li>
-                    <li>1~60렙, 정복자 200렙, 모든 문양 획득</li>
-                    <li>사용문양 5종 80렙 업글, 정복자보드, 스킬 구성</li>
-                    <li>신화우버, 고유템, 전설 1~4어픽 장착, 위상각인</li>
-                    <li>명품화 12강, 룬/보석/시즌파워 완비</li>
-                    <li>용병세팅 (캠페인 완료 되신분만)</li>
-                </ul>
-            </section>
-
-            <section class="card" aria-labelledby="proxy-service-title">
-                <h2 id="proxy-service-title">대행 서비스</h2>
-                <ul>
-                    <li>옵두사이트 10,000개 이상 대행</li>
-                    <li>잊혀진 영혼 1,000개 이상 대행</li>
-                    <li>시즌 퀘스트, 증오의 그릇 캠페인 대행</li>
-                    <li>릴리트 제단 + 명망 (6지역 4단계)</li>
-                    <li>기타 요청은 맞춤 대행 가능</li>
-                </ul>
-            </section>
-
-            <section class="card" aria-labelledby="item-sale-title">
-                <h2 id="item-sale-title">아이템 판매</h2>
-                <ul>
-                    <li>고유템, 전설템 모든 거래 가능템 판매</li>
-                    <li>고유 1~4어픽, 상옵/맥스 판매</li>
-                    <li>전설 1~3어픽 전체옵션 가능</li>
-                    <li>필요한 세트템 주문 가능</li>
-                </ul>
-            </section>
-
-            <footer class="footer">
-                <strong>⏰ 24시간 언제든지 문의 환영</strong>
-                💵 인벤 최저가 자부합니다<br/>
-                📞 클릭 시 1:1 상담 연결
-            </footer>
-            <div class="hidden-marker">madbychangong_do_not_copy_marker_ID_741852963</div>
-        </div>
-    </a>
-
-    <div class="copy-btn-wrapper">
-        <button class="copy-btn" onclick="copyHtmlSource()">📋 홍보물 복사</button>
+<div style="font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif; max-width:650px; margin:0 auto; background:#0d0d0d; border-radius:16px; padding:20px 15px 35px; box-shadow:0 0 25px rgba(0,0,0,0.8); color:#e0e0e0; line-height:1.5; cursor:pointer;" id="promotionalContent">
+  <div style="background:#1a1a1a; border-radius:16px; padding:25px 25px 30px; box-shadow:0 0 15px rgba(0,0,0,0.6);">
+    <!-- 슬래시 대신 '·' 사용, 한 줄 유지 위해 letter-spacing 살짝 좁히고 white-space: nowrap 추가 -->
+    <div style="font-size:2.3rem; font-weight:700; color:#80c7ff; text-shadow:0 0 8px rgba(128,199,255,0.7); margin-bottom:10px; letter-spacing:0.02rem; line-height:1.2; white-space: nowrap;">
+      D4 전문 대행|버스|템판매|풀세팅
+    </div>
+    <div style="font-size:1.2rem; color:#c4d9ff; text-shadow:0 0 5px rgba(196,217,255,0.5); margin-bottom:12px;">
+      📞 클릭하면 1:1 무료 상담 연결됩니다
     </div>
 
-    <script>
-        function copyHtmlSource() {
-            // body 안의 모든 요소를 복사
-            const bodyContent = document.body.cloneNode(true);
+    <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:20px;">
+      <span style="background:#4bb8ff; color:#0a1f39; font-weight:600; padding:5px 14px; border-radius:18px; font-size:0.95rem; box-shadow:0 0 8px #4bb8ffaa;">시즌9</span>
+      <span style="background:#4bb8ff; color:#0a1f39; font-weight:600; padding:5px 14px; border-radius:18px; font-size:0.95rem; box-shadow:0 0 8px #4bb8ffaa;">배틀넷</span>
+      <span style="background:#4bb8ff; color:#0a1f39; font-weight:600; padding:5px 14px; border-radius:18px; font-size:0.95rem; box-shadow:0 0 8px #4bb8ffaa;">스팀</span>
+      <span style="background:#4bb8ff; color:#0a1f39; font-weight:600; padding:5px 14px; border-radius:18px; font-size:0.95rem; box-shadow:0 0 8px #4bb8ffaa;">플스</span>
+      <span style="background:#4bb8ff; color:#0a1f39; font-weight:600; padding:5px 14px; border-radius:18px; font-size:0.95rem; box-shadow:0 0 8px #4bb8ffaa;">새벽작업 가능</span>
+    </div>
 
-            // 복사 버튼 래퍼 제거 (복사될 내용에는 포함되지 않도록)
-            const copyBtnWrapper = bodyContent.querySelector('.copy-btn-wrapper');
-            if (copyBtnWrapper) {
-                copyBtnWrapper.remove();
-            }
+    <!-- 카드 영역: 박스 패딩 원복, 글자 크기 2px 증가 -->
+    <div style="background:#2a2a2a; border-radius:14px; padding:18px 20px; box-shadow:inset 0 0 10px rgba(99,164,255,0.4); margin-bottom:20px;">
+      <div style="font-size:1.55rem; color:#a8d1ff; font-weight:600; margin-bottom:10px;">버스 서비스</div>
+      <ul style="padding-left:20px; margin:0; list-style-type:disc; font-size:1.1rem; color:#d7eaff; line-height:1.4;">
+        <li>1~60렙 고행4 뚫</li>
+        <li>고행4 벨리알 50판 / 100판</li>
+        <li>군세 판당 버스</li>
+        <li>정복자 1~300렙 버스 or 대행</li>
+        <li>정복자 대행 시 문양 무료 업글</li>
+      </ul>
+    </div>
 
-            // 스타일 태그 가져오기
-            const styleTag = document.querySelector('style');
-            let styleContent = '';
-            if (styleTag) {
-                styleContent = styleTag.textContent;
-            }
+    <div style="background:#2a2a2a; border-radius:14px; padding:18px 20px; box-shadow:inset 0 0 10px rgba(99,164,255,0.4); margin-bottom:20px;">
+      <div style="font-size:1.55rem; color:#a8d1ff; font-weight:600; margin-bottom:10px;">풀세팅 작업</div>
+      <ul style="padding-left:20px; margin:0; list-style-type:disc; font-size:1.1rem; color:#d7eaff; line-height:1.4;">
+        <li>야만 / 원소 / 도적 / 강령 / 혼령 / 드루 빌드 추천</li>
+        <li>1~60렙, 정복자 200렙, 모든 문양 획득</li>
+        <li>사용문양 5종 80렙 업글, 정복자보드, 스킬 구성</li>
+        <li>신화우버, 고유템, 전설 1~4어픽 장착, 위상각인</li>
+        <li>명품화 12강, 룬/보석/시즌파워 완비</li>
+        <li>용병세팅 (캠페인 완료 되신분만)</li>
+      </ul>
+    </div>
 
-            // 복사할 HTML 문자열 생성
-            // 내부 스타일을 <head> 안에 직접 포함
-            const htmlToCopy = `<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8" />
-    <title>D4 대행 서비스</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <style>
-        ${styleContent}
-    </style>
-</head>
-<body>
-    ${bodyContent.innerHTML}
-</body>
-</html>`;
+    <div style="background:#2a2a2a; border-radius:14px; padding:18px 20px; box-shadow:inset 0 0 10px rgba(99,164,255,0.4); margin-bottom:20px;">
+      <div style="font-size:1.55rem; color:#a8d1ff; font-weight:600; margin-bottom:10px;">대행 서비스</div>
+      <ul style="padding-left:20px; margin:0; list-style-type:disc; font-size:1.1rem; color:#d7eaff; line-height:1.4;">
+        <li>옵두사이트 10,000개 이상 대행</li>
+        <li>잊혀진 영혼 1,000개 이상 대행</li>
+        <li>시즌 퀘스트, 증오의 그릇 캠페인 대행</li>
+        <li>릴리트 제단 + 명망 (6지역 4단계)</li>
+        <li>기타 요청은 맞춤 대행 가능</li>
+      </ul>
+    </div>
 
-            // clipboard API를 사용하여 복사
-            navigator.clipboard.writeText(htmlToCopy)
-                .then(() => {
-                    const btn = document.querySelector('.copy-btn');
-                    btn.textContent = '✅ 복사 완료!';
-                    setTimeout(() => { btn.textContent = '📋 홍보물 복사'; }, 2000);
-                })
-                .catch(err => {
-                    console.error('복사 실패:', err);
-                    alert('복사에 실패했습니다. 브라우저 설정을 확인해주세요.');
-                });
-        }
-    </script>
-</body>
-</html>
+    <div style="background:#2a2a2a; border-radius:14px; padding:18px 20px; box-shadow:inset 0 0 10px rgba(99,164,255,0.4); margin-bottom:20px;">
+      <div style="font-size:1.55rem; color:#a8d1ff; font-weight:600; margin-bottom:10px;">아이템 판매</div>
+      <ul style="padding-left:20px; margin:0; list-style-type:disc; font-size:1.1rem; color:#d7eaff; line-height:1.4;">
+        <li>고유템, 전설템 모든 거래 가능템 판매</li>
+        <li>고유 1~4어픽, 상옵/맥스 판매</li>
+        <li>전설 1~3어픽 전체옵션 가능</li>
+        <li>필요한 세트템 주문 가능</li>
+      </ul>
+    </div>
+
+    <!-- 푸터 -->
+    <div style="margin-top:30px; font-size:1.075rem; text-align:center; color:#bcd9ffcc;">
+      <strong style="color:#dbf0ff; display:block; font-weight:700; margin-bottom:6px; text-shadow:0 0 8px rgba(219,240,255,0.7);">⏰ 24시간 언제든지 문의 환영</strong>
+      💵 인벤 최저가 자부합니다<br>
+      <a href="https://open.kakao.com/me/LunaBliss" target="_blank" style="color:#4bb8ff; text-decoration:none;">📞 클릭 시 1:1 상담 연결</a>
+    </div>
+  </div>
+</div>
+
+<!-- 홍보물 복사 버튼 -->
+<button id="copyPromoButton" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 12px 25px;
+  background-color: #4bb8ff;
+  color: #0a1f39;
+  font-size: 1.225rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(75, 184, 255, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+">
+  홍보물 복사
+</button>
+
+<!-- 숨겨진 워터마크 -->
+<div style="font-size:3px; color:#0d0d0d; height:1px; overflow:hidden;">madebychangong_dontcopy_tag7425x</div>
+
+<script>
+  document.getElementById('copyPromoButton').addEventListener('click', async (event) => {
+    event.stopPropagation();
+    const contentToCopy = document.getElementById('promotionalContent').outerHTML;
+    try {
+      await navigator.clipboard.writeText(contentToCopy);
+      alert('홍보물 HTML이 성공적으로 복사되었습니다! 인벤 게시판에 붙여넣기 하세요. 😉');
+    } catch (err) {
+      console.error('클립보드 복사 실패:', err);
+      alert('복사에 실패했습니다.');
+    }
+  });
+
+  document.getElementById('promotionalContent').addEventListener('click', () => {
+    window.open('https://open.kakao.com/me/LunaBliss', '_blank');
+  });
+</script>
