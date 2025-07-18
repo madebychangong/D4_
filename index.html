@@ -223,13 +223,14 @@
   <script>
     function copyHtmlSource() {
       // 버튼을 제외한 HTML 복사
-      // body 태그 내의 모든 내용을 가져와서 복사 대상으로 만듭니다.
-      // 단, copy-btn-wrapper는 제외해야 하므로 복사 전에 제거하고 다시 추가합니다.
       const bodyContent = document.body.cloneNode(true);
       const copyBtnWrapper = bodyContent.querySelector('.copy-btn-wrapper');
       if (copyBtnWrapper) {
-        copyBtnWrapper.remove();
+        copyBtnWrapper.remove(); // 복사할 내용에서 버튼 제거
       }
+
+      // style 태그를 직접 복사해서 가져옵니다. (outerHTML 사용)
+      const styleElement = document.querySelector('style').outerHTML;
 
       const htmlToCopy = `<!DOCTYPE html>
 <html lang="ko">
@@ -237,8 +238,7 @@
   <meta charset="UTF-8" />
   <title>D4 대행 서비스</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <style>${document.querySelector('style').innerHTML}</style>
-</head>
+  ${styleElement} </head>
 <body>
   ${bodyContent.innerHTML}
 </body>
