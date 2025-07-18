@@ -5,6 +5,7 @@
     <title>D4 대행 서비스</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
+        
         /* 외부 폰트 임포트는 제거된 상태로 유지합니다. */
 
         body {
@@ -12,7 +13,7 @@
             font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; /* 시스템 기본 한글 폰트로 대체 */
             background-color: #121922; /* 배경색 다시 적용 */
             color: #f3f3f3; /* 텍스트 색상 다시 적용 */
-            line-height: 1.7;
+            line-height: 1.7 !important; /* 줄 간격을 !important로 강제 적용 */
             padding: 40px 16px;
             padding-bottom: 80px; /* 버튼 공간 확보 */
         }
@@ -95,6 +96,7 @@
             margin-bottom: 9px;
             position: relative;
             padding-left: 18px;
+            line-height: 1.5 !important; /* ul li의 줄 간격도 강제 적용 */
         }
 
         .card ul li::before {
@@ -103,7 +105,7 @@
             left: 0;
             top: 0;
             font-size: 1rem;
-            line-height: 1;
+            line-height: 1 !important; /* before 요소의 줄 간격도 강제 적용 */
             color: #a5c9ff; /* 색상 다시 적용 */
         }
 
@@ -114,7 +116,7 @@
             color: #bcd9ffcc; /* 색상 다시 적용 */
             user-select: text;
             letter-spacing: 0.03em;
-            line-height: 1.5;
+            line-height: 1.5 !important; /* 푸터의 줄 간격도 강제 적용 */
         }
 
         .footer strong {
@@ -148,9 +150,11 @@
             background: #80c7ff; /* 배경색 다시 적용 */
             transform: scale(1.05);
         }
+    
     </style>
 </head>
 <body>
+    
     <a href="https://open.kakao.com/me/LunaBliss" target="_blank" id="full-link" aria-label="디아블로4 1대1 상담 오픈채팅 바로가기">
         <div class="container" role="main">
             <div class="title">D4 전문 대행 / 버스 / 템판매 / 풀세팅</div>
@@ -210,15 +214,13 @@
 
             <footer class="footer">
                 <strong>⏰ 24시간 언제든지 문의 환영</strong>
-                💵 인벤 최저가 자부합니다<br/>
+                💵 인벤 최저가 자부합니다<br>
                 📞 클릭 시 1:1 상담 연결
             </footer>
         </div>
     </a>
 
-    <div class="copy-btn-wrapper">
-        <button class="copy-btn" onclick="copyHtmlSource()">📋 홍보물 복사</button>
-    </div>
+    
 
     <script>
         function copyHtmlSource() {
@@ -229,8 +231,9 @@
                 copyBtnWrapper.remove(); // 복사할 내용에서 버튼 제거 (재귀 복사를 방지)
             }
 
-            // style 태그를 직접 복사해서 가져옵니다. (outerHTML 사용: style 태그 전체와 내용 포함)
-            const styleElement = document.querySelector('style').outerHTML;
+            // style 태그의 내용을 직접 가져와서 복사될 HTML에 삽입합니다.
+            // 이렇게 하면 외부 CSS 파일 의존성 없이 복사된 내용에 스타일이 포함됩니다.
+            const styleContent = document.querySelector('style').textContent;
 
             const htmlToCopy = `<!DOCTYPE html>
 <html lang="ko">
@@ -238,7 +241,9 @@
     <meta charset="UTF-8" />
     <title>D4 대행 서비스</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    ${styleElement}
+    <style>
+        ${styleContent}
+    </style>
 </head>
 <body>
     ${bodyContent.innerHTML}
@@ -254,5 +259,8 @@
                 .catch(err => console.error('복사 실패:', err));
         }
     </script>
+
+
+
 </body>
 </html>
