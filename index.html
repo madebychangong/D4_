@@ -10,7 +10,7 @@
             font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
             background-color: #121922;
             color: #f3f3f3;
-            line-height: 1.7 !important;
+            line-height: 1.7; /* !important 제거 */
             padding: 40px 16px;
             padding-bottom: 80px;
         }
@@ -66,7 +66,7 @@
 
         .card {
             background-color: rgba(255, 255, 255, 0.08);
-            padding: 22px 26px;
+            padding: 12px 20px;
             border-radius: 14px;
             margin-top: 28px;
             box-shadow: inset 0 0 12px #63a4ff55;
@@ -76,7 +76,7 @@
         .card h2 {
             font-size: 1.25rem;
             color: #a8d1ff;
-            margin-bottom: 14px;
+            margin-bottom: 8px;
             text-shadow: 0 0 5px #7bb9ff;
             letter-spacing: 0.03em;
         }
@@ -87,14 +87,16 @@
             color: #d7eaff;
             font-size: 1rem;
             letter-spacing: 0.02em;
+            list-style-position: inside;
         }
 
         .card ul li {
-            margin-bottom: 9px;
-            position: relative;
-            line-height: 1.5 !important;
+            margin-bottom: 5px;
+            line-height: 1.4; /* !important 제거 */
+            text-indent: -1.2em;
+            padding-left: 1.2em;
         }
-        
+
         .footer {
             margin-top: 44px;
             font-size: 1rem;
@@ -102,7 +104,7 @@
             color: #bcd9ffcc;
             user-select: text;
             letter-spacing: 0.03em;
-            line-height: 1.5 !important;
+            line-height: 1.5; /* !important 제거 */
         }
 
         .footer strong {
@@ -138,7 +140,7 @@
 
         .hidden-marker {
             font-size: 1px;
-            color: #121922; /* body 배경색과 동일 */
+            color: #121922;
             position: absolute;
             left: -9999px;
             overflow: hidden;
@@ -154,7 +156,7 @@
             <div class="title">D4 전문 대행 / 버스 / 템판매 / 풀세팅</div>
             <div class="subtext">📞 클릭하면 1:1 무료 상담 연결됩니다</div>
 
-            <div class="badge-group" aria-label="서비스 특장점">
+            <div class="badge-group">
                 <span class="badge">시즌9</span>
                 <span class="badge">배틀넷</span>
                 <span class="badge">스팀</span>
@@ -221,14 +223,24 @@
 
     <script>
         function copyHtmlSource() {
+            // body 안의 모든 요소를 복사
             const bodyContent = document.body.cloneNode(true);
+
+            // 복사 버튼 래퍼 제거 (복사될 내용에는 포함되지 않도록)
             const copyBtnWrapper = bodyContent.querySelector('.copy-btn-wrapper');
             if (copyBtnWrapper) {
                 copyBtnWrapper.remove();
             }
 
-            const styleContent = document.querySelector('style').textContent;
+            // 스타일 태그 가져오기
+            const styleTag = document.querySelector('style');
+            let styleContent = '';
+            if (styleTag) {
+                styleContent = styleTag.textContent;
+            }
 
+            // 복사할 HTML 문자열 생성
+            // 내부 스타일을 <head> 안에 직접 포함
             const htmlToCopy = `<!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -244,13 +256,17 @@
 </body>
 </html>`;
 
+            // clipboard API를 사용하여 복사
             navigator.clipboard.writeText(htmlToCopy)
                 .then(() => {
                     const btn = document.querySelector('.copy-btn');
                     btn.textContent = '✅ 복사 완료!';
                     setTimeout(() => { btn.textContent = '📋 홍보물 복사'; }, 2000);
                 })
-                .catch(err => console.error('복사 실패:', err));
+                .catch(err => {
+                    console.error('복사 실패:', err);
+                    alert('복사에 실패했습니다. 브라우저 설정을 확인해주세요.');
+                });
         }
     </script>
 </body>
