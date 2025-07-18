@@ -223,13 +223,13 @@
   <script>
     function copyHtmlSource() {
       // 버튼을 제외한 HTML 복사
-      const bodyContent = document.body.cloneNode(true);
+      const bodyContent = document.body.cloneNode(true); // body의 전체 내용을 복제
       const copyBtnWrapper = bodyContent.querySelector('.copy-btn-wrapper');
       if (copyBtnWrapper) {
-        copyBtnWrapper.remove(); // 복사할 내용에서 버튼 제거
+        copyBtnWrapper.remove(); // 복사할 내용에서 버튼 제거 (재귀 복사를 방지)
       }
 
-      // style 태그를 직접 복사해서 가져옵니다. (outerHTML 사용)
+      // style 태그를 직접 복사해서 가져옵니다. (outerHTML 사용: style 태그 전체와 내용 포함)
       const styleElement = document.querySelector('style').outerHTML;
 
       const htmlToCopy = `<!DOCTYPE html>
