@@ -5,16 +5,14 @@
     <title>D4 대행 서비스</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
-        /* 외부 폰트 임포트는 제거된 상태로 유지합니다. */
-
         body {
             margin: 0;
-            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; /* 시스템 기본 한글 폰트로 대체 */
-            background-color: #121922; /* 배경색 다시 적용 */
-            color: #f3f3f3; /* 텍스트 색상 다시 적용 */
-            line-height: 1.7 !important; /* 줄 간격을 !important로 강제 적용 */
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            background-color: #121922;
+            color: #f3f3f3;
+            line-height: 1.7 !important;
             padding: 40px 16px;
-            padding-bottom: 80px; /* 버튼 공간 확보 */
+            padding-bottom: 80px;
         }
 
         a#full-link {
@@ -26,10 +24,10 @@
         .container {
             max-width: 740px;
             margin: 0 auto;
-            background-color: rgba(0, 0, 0, 0.45); /* 배경색 다시 적용 */
-            padding: 30px 25px; /* 좌우 패딩을 더 줄여볼 수 있습니다. (예: 30px 15px;) */
+            background-color: rgba(0, 0, 0, 0.45);
+            padding: 30px 25px;
             border-radius: 16px;
-            box-shadow: 0 0 25px rgba(0, 0, 0, 0.7); /* 그림자 다시 적용 */
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
             user-select: text;
         }
 
@@ -38,14 +36,14 @@
             font-weight: 700;
             margin-bottom: 12px;
             letter-spacing: 0.04em;
-            text-shadow: 0 0 6px #80c7ff; /* 그림자 다시 적용 */
+            text-shadow: 0 0 6px #80c7ff;
         }
 
         .subtext {
             font-size: 1.05rem;
-            color: #c4d9ff; /* 색상 다시 적용 */
+            color: #c4d9ff;
             margin-bottom: 25px;
-            letter-spacing: 0.03em; /* 이 값을 줄이거나 제거하면 글자가 더 촘촘해집니다. */
+            letter-spacing: 0.03em;
         }
 
         .badge-group {
@@ -54,71 +52,67 @@
 
         .badge {
             display: inline-block;
-            background: #4bb8ff; /* 배경색 다시 적용 */
+            background: #4bb8ff;
             padding: 5px 14px;
             margin: 5px 8px 0 0;
             border-radius: 14px;
             font-size: 0.85rem;
             font-weight: 600;
-            color: #0a1f39; /* 색상 다시 적용 */
-            box-shadow: 0 0 8px #4bb8ffaa; /* 그림자 다시 적용 */
+            color: #0a1f39;
+            box-shadow: 0 0 8px #4bb8ffaa;
             user-select: none;
             letter-spacing: 0.03em;
         }
 
         .card {
-            background-color: rgba(255, 255, 255, 0.08); /* 배경색 다시 적용 */
+            background-color: rgba(255, 255, 255, 0.08);
             padding: 22px 26px;
             border-radius: 14px;
             margin-top: 28px;
-            box-shadow: inset 0 0 12px #63a4ff55; /* 그림자 다시 적용 */
+            box-shadow: inset 0 0 12px #63a4ff55;
             user-select: text;
         }
 
         .card h2 {
             font-size: 1.25rem;
-            color: #a8d1ff; /* 색상 다시 적용 */
+            color: #a8d1ff;
             margin-bottom: 14px;
-            text-shadow: 0 0 5px #7bb9ff; /* 그림자 다시 적용 */
+            text-shadow: 0 0 5px #7bb9ff;
             letter-spacing: 0.03em;
         }
 
         .card ul {
-            padding-left: 0; /* 좌측 패딩 제거 또는 더 줄여서 공간 활용 */
+            padding-left: 0;
             margin: 0;
-            color: #d7eaff; /* 색상 다시 적용 */
+            color: #d7eaff;
             font-size: 1rem;
-            letter-spacing: 0.02em; /* 이 값을 줄이거나 제거하면 글자가 더 촘촘해집니다. */
+            letter-spacing: 0.02em;
         }
 
         .card ul li {
             margin-bottom: 9px;
             position: relative;
-            /* padding-left: 18px; */ /* 눈꽃 이모티콘 제거로 인해 이 패딩 제거 */
-            line-height: 1.5 !important; /* ul li의 줄 간격도 강제 적용 */
+            line-height: 1.5 !important;
         }
-
-        /* .card ul li::before 규칙은 눈꽃 이모티콘을 완전히 제거하면서 함께 삭제합니다. */
-
+        
         .footer {
             margin-top: 44px;
             font-size: 1rem;
             text-align: center;
-            color: #bcd9ffcc; /* 색상 다시 적용 */
+            color: #bcd9ffcc;
             user-select: text;
-            letter-spacing: 0.03em; /* 이 값을 줄이거나 제거하면 글자가 더 촘촘해집니다. */
-            line-height: 1.5 !important; /* 푸터의 줄 간격도 강제 적용 */
+            letter-spacing: 0.03em;
+            line-height: 1.5 !important;
         }
 
         .footer strong {
             display: block;
             margin-bottom: 8px;
-            color: #dbf0ff; /* 색상 다시 적용 */
+            color: #dbf0ff;
             font-weight: 700;
-            text-shadow: 0 0 8px #7db8ffaa; /* 그림자 다시 적용 */
+            text-shadow: 0 0 8px #7db8ffaa;
         }
 
-        /* 추가: 고정된 홍보물 복사 버튼 */
         .copy-btn-wrapper {
             position: fixed;
             bottom: 20px;
@@ -126,19 +120,19 @@
             z-index: 1000;
         }
         .copy-btn {
-            background: #4bb8ff; /* 배경색 다시 적용 */
-            color: #0a1f39; /* 색상 다시 적용 */
+            background: #4bb8ff;
+            color: #0a1f39;
             border: none;
             padding: 12px 24px;
             border-radius: 50px;
             font-size: 1rem;
             font-weight: 700;
             cursor: pointer;
-            box-shadow: 0 0 15px #4bb8ffaa; /* 그림자 다시 적용 */
+            box-shadow: 0 0 15px #4bb8ffaa;
             transition: all 0.3s;
         }
         .copy-btn:hover {
-            background: #80c7ff; /* 배경색 다시 적용 */
+            background: #80c7ff;
             transform: scale(1.05);
         }
     </style>
@@ -213,15 +207,12 @@
 
     <script>
         function copyHtmlSource() {
-            // 버튼을 제외한 HTML 복사
-            const bodyContent = document.body.cloneNode(true); // body의 전체 내용을 복제
+            const bodyContent = document.body.cloneNode(true);
             const copyBtnWrapper = bodyContent.querySelector('.copy-btn-wrapper');
             if (copyBtnWrapper) {
-                copyBtnWrapper.remove(); // 복사할 내용에서 버튼 제거 (재귀 복사를 방지)
+                copyBtnWrapper.remove();
             }
 
-            // style 태그의 내용을 직접 가져와서 복사될 HTML에 삽입합니다.
-            // 이렇게 하면 외부 CSS 파일 의존성 없이 복사된 내용에 스타일이 포함됩니다.
             const styleContent = document.querySelector('style').textContent;
 
             const htmlToCopy = `<!DOCTYPE html>
