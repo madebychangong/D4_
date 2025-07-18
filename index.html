@@ -94,19 +94,19 @@
         .card ul li {
             margin-bottom: 9px;
             position: relative;
-            padding-left: 18px;
+            padding-left: 18px; /* 이모티콘이 사라졌으므로 필요하다면 0으로 변경 가능 */
             line-height: 1.5 !important; /* ul li의 줄 간격도 강제 적용 */
         }
 
-        .card ul li::before {
-            content: "❄️";
-            position: absolute;
-            left: 0;
-            top: 0;
-            font-size: 1rem;
-            line-height: 1 !important; /* before 요소의 줄 간격도 강제 적용 */
-            color: #a5c9ff; /* 색상 다시 적용 */
-        }
+        /* .card ul li::before { */ /* 눈꽃 이모티콘 관련 CSS 규칙 제거 */
+            /* content: "❄️"; */
+            /* position: absolute; */
+            /* left: 0; */
+            /* top: 0; */
+            /* font-size: 1rem; */
+            /* line-height: 1 !important; */
+            /* color: #a5c9ff; */
+        /* } */
 
         .footer {
             margin-top: 44px;
@@ -182,9 +182,8 @@
                     <li>야만 / 원소 / 도적 / 강령 / 혼령 / 드루 빌드 추천</li>
                     <li>1~60렙, 정복자 200렙, 모든 문양 획득</li>
                     <li>사용문양 5종 80렙 업글, 정복자보드, 스킬 구성</li>
-                    <li>신화우버, 고유템, 전설 1~4어픽 장착, 위상각인</li>
+                    <li>신화우버, 고유템, 전설 1~4어픽 장착</li>
                     <li>명품화 12강, 룬/보석/시즌파워 완비</li>
-                    <li>용병세팅 (캠페인 완료되신분만)</li>
                 </ul>
             </section>
 
@@ -205,7 +204,7 @@
                     <li>고유템, 전설템 모든 거래 가능템 판매</li>
                     <li>고유 1~4어픽, 상옵/맥스 판매</li>
                     <li>전설 1~3어픽 전체옵션 가능</li>
-                    <li>세트템 주문 제작 가능</li>
+                    <li>필요한 세트템 주문 가능</li>
                 </ul>
             </section>
 
