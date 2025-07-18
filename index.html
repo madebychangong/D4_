@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>D4 대행 서비스</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'IBM Plex Sans KR', sans-serif;
+      background-color: #121922;
+      color: #f3f3f3;
+      line-height: 1.7;
+      padding: 40px 16px;
+      padding-bottom: 80px; /* 버튼 공간 확보 */
+    }
+
+    a#full-link {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 740px;
+      margin: 0 auto;
+      background-color: rgba(0, 0, 0, 0.45);
+      padding: 30px 25px;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+      user-select: text;
+    }
+
+    .title {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: 0.04em;
+      text-shadow: 0 0 6px #80c7ff;
+    }
+
+    .subtext {
+      font-size: 1.05rem;
+      color: #c4d9ff;
+      margin-bottom: 25px;
+      letter-spacing: 0.03em;
+    }
+
+    .badge-group {
+      margin-bottom: 28px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #4bb8ff;
+      padding: 5px 14px;
+      margin: 5px 8px 0 0;
+      border-radius: 14px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #0a1f39;
+      box-shadow: 0 0 8px #4bb8ffaa;
+      user-select: none;
+      letter-spacing: 0.03em;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.08);
+      padding: 22px 26px;
+      border-radius: 14px;
+      margin-top: 28px;
+      box-shadow: inset 0 0 12px #63a4ff55;
+      user-select: text;
+    }
+
+    .card h2 {
+      font-size: 1.25rem;
+      color: #a8d1ff;
+      margin-bottom: 14px;
+      text-shadow: 0 0 5px #7bb9ff;
+      letter-spacing: 0.03em;
+    }
+
+    .card ul {
+      padding-left: 20px;
+      margin: 0;
+      color: #d7eaff;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .card ul li {
+      margin-bottom: 9px;
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .card ul li::before {
+      content: "❄️";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 1rem;
+      line-height: 1;
+      color: #a5c9ff;
+    }
+
+    .footer {
+      margin-top: 44px;
+      font-size: 1rem;
+      text-align: center;
+      color: #bcd9ffcc;
+      user-select: text;
+      letter-spacing: 0.03em;
+      line-height: 1.5;
+    }
+
+    .footer strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #dbf0ff;
+      font-weight: 700;
+      text-shadow: 0 0 8px #7db8ffaa;
+    }
+
+    /* 추가: 고정된 홍보물 복사 버튼 */
+    .copy-btn-wrapper {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .copy-btn {
+      background: #4bb8ff;
+      color: #0a1f39;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 0 15px #4bb8ffaa;
+      transition: all 0.3s;
+    }
+    .copy-btn:hover {
+      background: #80c7ff;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <a href="https://open.kakao.com/me/LunaBliss" target="_blank" id="full-link" aria-label="디아블로4 1대1 상담 오픈채팅 바로가기">
+    <div class="container" role="main">
+      <div class="title">D4 전문 대행 / 버스 / 템판매 / 풀세팅</div>
+      <div class="subtext">📞 클릭하면 1:1 무료 상담 연결됩니다</div>
+
+      <div class="badge-group" aria-label="서비스 특장점">
+        <span class="badge">시즌9</span>
+        <span class="badge">배틀넷</span>
+        <span class="badge">스팀</span>
+        <span class="badge">플스</span>
+        <span class="badge">새벽작업 가능</span>
+      </div>
+
+      <section class="card" aria-labelledby="bus-service-title">
+        <h2 id="bus-service-title">버스 서비스</h2>
+        <ul>
+          <li>1~60렙 고행4 뚫</li>
+          <li>고행4 벨리알 50판 / 100판</li>
+          <li>군세 판당 버스</li>
+          <li>정복자 1~300렙 버스 or 대행</li>
+          <li>정복자 대행 시 문양 무료 업글</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="full-setup-title">
+        <h2 id="full-setup-title">풀세팅 작업</h2>
+        <ul>
+          <li>야만 / 원소 / 도적 / 강령 / 혼령 / 드루 빌드 추천</li>
+          <li>1~60렙, 정복자 200렙, 모든 문양 획득</li>
+          <li>사용문양 5종 80렙 업글, 정복자보드, 스킬 구성</li>
+          <li>신화우버, 고유템, 전설 1~4어픽 장착</li>
+          <li>명품화 12강, 룬/보석/시즌파워 완비</li>
+          <li>용병세팅 (캠페인 미완료도 가능)</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="proxy-service-title">
+        <h2 id="proxy-service-title">대행 서비스</h2>
+        <ul>
+          <li>옵두사이트 10,000개 이상 대행</li>
+          <li>잊혀진 영혼 1,000개 이상 대행</li>
+          <li>시즌 퀘스트, 증오의 그릇 캠페인 대행</li>
+          <li>릴리트 제단 + 명망 (6지역 4단계)</li>
+          <li>기타 요청은 맞춤 대행 가능</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="item-sale-title">
+        <h2 id="item-sale-title">아이템 판매</h2>
+        <ul>
+          <li>고유템, 전설템 모든 거래 가능템 판매</li>
+          <li>고유 1~4어픽, 상옵/맥스 판매</li>
+          <li>전설 1~3어픽 전체옵션 가능</li>
+          <li>세트템 주문 제작 가능</li>
+        </ul>
+      </section>
+
+      <footer class="footer">
+        <strong>⏰ 24시간 언제든지 문의 환영</strong>
+        💵 인벤 최저가 자부합니다<br/>
+        📞 클릭 시 1:1 상담 연결
+      </footer>
+    </div>
+  </a>
+
+    <div class="copy-btn-wrapper">
+    <button class="copy-btn" onclick="copyHtmlSource()">📋 홍보물 복사</button>
+  </div>
+
+  <script>
+    function copyHtmlSource() {
+      // 버튼을 제외한 HTML 복사
+      // body 태그 내의 모든 내용을 가져와서 복사 대상으로 만듭니다.
+      // 단, copy-btn-wrapper는 제외해야 하므로 복사 전에 제거하고 다시 추가합니다.
+      const bodyContent = document.body.cloneNode(true);
+      const copyBtnWrapper = bodyContent.querySelector('.copy-btn-wrapper');
+      if (copyBtnWrapper) {
+        copyBtnWrapper.remove();
+      }
+
+      const htmlToCopy = `<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>D4 대행 서비스</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>${document.querySelector('style').innerHTML}</style>
+</head>
+<body>
+  ${bodyContent.innerHTML}
+</body>
+</html>`;
+
+      navigator.clipboard.writeText(htmlToCopy)
+        .then(() => {
+          const btn = document.querySelector('.copy-btn');
+          btn.textContent = '✅ 복사 완료!';
+          setTimeout(() => { btn.textContent = '📋 홍보물 복사'; }, 2000);
+        })
+        .catch(err => console.error('복사 실패:', err));
+    }
+  </script>
+</body>
+</html>
