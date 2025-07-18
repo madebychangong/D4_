@@ -5,7 +5,6 @@
     <title>D4 대행 서비스</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
-        
         /* 외부 폰트 임포트는 제거된 상태로 유지합니다. */
 
         body {
@@ -150,11 +149,9 @@
             background: #80c7ff; /* 배경색 다시 적용 */
             transform: scale(1.05);
         }
-    
     </style>
 </head>
 <body>
-    
     <a href="https://open.kakao.com/me/LunaBliss" target="_blank" id="full-link" aria-label="디아블로4 1대1 상담 오픈채팅 바로가기">
         <div class="container" role="main">
             <div class="title">D4 전문 대행 / 버스 / 템판매 / 풀세팅</div>
@@ -185,9 +182,9 @@
                     <li>야만 / 원소 / 도적 / 강령 / 혼령 / 드루 빌드 추천</li>
                     <li>1~60렙, 정복자 200렙, 모든 문양 획득</li>
                     <li>사용문양 5종 80렙 업글, 정복자보드, 스킬 구성</li>
-                    <li>신화우버, 고유템, 전설 1~4어픽 장착</li>
+                    <li>신화우버, 고유템, 전설 1~4어픽 장착, 위상각인</li>
                     <li>명품화 12강, 룬/보석/시즌파워 완비</li>
-                    <li>용병세팅 (캠페인 미완료도 가능)</li>
+                    <li>용병세팅 (캠페인 완료되신분만)</li>
                 </ul>
             </section>
 
@@ -214,13 +211,15 @@
 
             <footer class="footer">
                 <strong>⏰ 24시간 언제든지 문의 환영</strong>
-                💵 인벤 최저가 자부합니다<br>
+                💵 인벤 최저가 자부합니다<br/>
                 📞 클릭 시 1:1 상담 연결
             </footer>
         </div>
     </a>
 
-    
+    <div class="copy-btn-wrapper">
+        <button class="copy-btn" onclick="copyHtmlSource()">📋 홍보물 복사</button>
+    </div>
 
     <script>
         function copyHtmlSource() {
@@ -259,8 +258,5 @@
                 .catch(err => console.error('복사 실패:', err));
         }
     </script>
-
-
-
 </body>
 </html>
